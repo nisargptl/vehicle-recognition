@@ -1,0 +1,87 @@
+body{
+	margin:0px;
+}
+
+.container{
+	display:grid;
+	grid-template-columns:1fr;
+}
+.wrapper{
+	display: flex;
+	justify-content: space-between;
+	padding: 38px;
+}
+
+.left-side{
+	text-decoration:none;
+	display: flex;
+}
+
+
+
+.link-wrapper{
+	margin-right: 20px;
+	font-size:0.9em;
+	text-transform:uppercase;
+	height:22px;
+	border-bottom: 1px solid transparent;
+	transition: border-bottom 0.5s;
+}
+
+.link-wrapper a{
+	color:#8a8a8a;
+	text-decoration:none;
+	transition: color 0.5s;
+}
+
+
+
+.wrapper a:hover{
+	color :black;
+}
+
+.message {
+	 text-align: center;
+    vertical-align: middle;
+}
+
+.Compare-Item-wrapper {
+	 text-align: center;
+    vertical-align: middle;
+	display: flex;
+}
+
+.Compare-Item-wrapper .Compare-Item1{
+	position:relative;
+	
+	width:50%;
+	height:196px;
+	border:1px solid #ececec;
+}
+
+.Compare-Item-wrapper .Compare-Item1 .Add-sign .image{
+	width:60px;
+	height:60px;
+	position:relative;
+	background-image:url(https://static.toiimg.com/photo/80392190.cms);
+	display:block;
+	background-position:-20px 1135px;
+	margin: 0 auto 24px;	
+}
+
+.Compare-Item-wrapper .Compare-Item2{
+	position:relative;
+	width:50%;
+	height:196px;
+	border:1px solid #ececec;
+}
+
+.Compare-Item-wrapper .Compare-Item2 .Add-sign .image{
+	width:60px;
+	height:60px;
+	position:relative;
+	background-image:url(https://static.toiimg.com/photo/80392190.cms);
+	display:block;
+	background-position:-20px 1135px;
+	margin: 0 auto 24px;	
+}
