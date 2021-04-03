@@ -1,0 +1,145 @@
+body{
+	background: #fefefe;
+	font-family: Roboto;
+}
+
+.container{
+	display:grid;
+	grid-template-columns:1fr;
+}
+.wrapper{
+	display: flex;
+	justify-content: space-between;
+	padding: 38px;
+}
+
+.left-side{
+	text-decoration:none;
+	display: flex;
+}
+
+
+
+.link-wrapper{
+	margin-right: 20px;
+	font-size:0.9em;
+	text-transform:uppercase;
+	height:22px;
+	border-bottom: 1px solid transparent;
+	transition: border-bottom 0.5s;
+}
+
+.link-wrapper a{
+	color:#8a8a8a;
+	text-decoration:none;
+	transition: color 0.5s;
+}
+
+
+
+* {
+  box-sizing: border-box;
+}
+
+.column {
+  float: left;
+  padding: 10px;
+  /*height: 300px; *//* Should be removed. Only for demonstration */
+}
+
+.left {
+  width: 25%;
+}
+
+.right {
+  width: 75%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.contents{
+    -webkit-column-count: 2; /* Chrome, Safari, Opera */
+    -moz-column-count: 2; /* Firefox */
+    column-count: 2;
+}
+input[type=checkbox] + label {
+  display: block;
+  margin: 0.2em;
+  cursor: pointer;
+  padding: 0.2em;
+  
+}
+
+input[type=checkbox] {
+  display: none;
+}
+
+input[type=checkbox] + label:before {
+  content: "\2714";
+  border: 0.1em solid #000;
+  border-radius: 0.2em;
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  padding-left: 0.2em;
+  padding-bottom: 0.3em;
+  margin-right: 0.2em;
+  vertical-align: bottom;
+  color: transparent;
+  transition: .2s;
+}
+
+input[type=checkbox] + label:active:before {
+  transform: scale(0);
+ 
+}
+
+input[type=checkbox]:checked + label:before {
+  background-color: MediumSeaGreen;
+  border-color: MediumSeaGreen;
+  color: #fff;
+}
+
+
+.rangeBox{ /* carry complete  range box*/
+    width:300px;
+    height:50px;
+    
+    }
+.rangeBox .sliderBox{
+    position:relative;
+    top:0%;
+    width:300px;  /*2x width*/
+    }
+#slider0to50{
+    width:150px;/*1x width*/
+    position:absolute;
+    left:0%;
+    }
+#slider51to100{
+    width:150px;/*1x width*/
+    position:absolute;
+    left:50%;
+    }
+.rangeBox .inputRange{
+    position:relative;
+    top:50%;
+    }
+.rangeBox .inputRange::after{
+    content:"";
+    clear:both;
+    display:block
+    }
+.rangeBox .inputRange #min{
+     width:40%;
+    float:left;
+     }   
+.rangeBox .inputRange #max{
+     width:40%;
+    float:right;
+    }
