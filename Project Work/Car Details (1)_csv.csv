@@ -1,0 +1,45 @@
+Name,Price($),Type,Company,Engine power(hp),Seater,Gear transmission,Diesel/Petrol,Country
+Ford edge SUV 2012,6.5 lakhs,SUV,Ford ,335,5,Auto,Petrol,America
+Hyundai Accent Sedan 2012,9.5 lakhs,Sedan,Hyundai,138,5,Manual,Diesel,South Korea
+Hyundai elantra touring hatchback 2012,5.8 lakhs,Sedan,Hyundai,138,5,Manual,Diesel,South Korea
+Ferrari 458 italia convertible 2012,90 lakhs, sedan,Ferrari,562,2,Auto,Petrol,Italy
+Ferrari FF coupe 2012,3.79 cr,mini sedan,Ferrari,651,4,Auto,Petrol,Italy
+FIAT 500 convertible 2012,14.93 lakhs,SUV,FIAT,160,4,Manual,Diesel,Italy
+Honda accord coupe 2012,20.80 lakhs,Sedan,Honda,271.3,5,Both,Petrol,Japan
+Jeep compass SUV 2012,28.29 lakhs,SUV,Jeep,172,5,Auto,Diesel,America
+FIAT 500 abarth 2012,29.85 lakhs,SUV,FIAT,160,4,Auto,Petrol,Italy
+Lamborghini aventador coupe 2012,6.25 cr,sedan,Lamborghini,770,2,Auto,Petrol,Italy
+Mercedes benz  C class sedan 2012,32.07 lakhs,sedan,Mercedes,228,5,Auto,both,Germany
+Mercedes benz  E class sedan 2012,62.83 lakhs,sedan,Mercedes,603.46,5,Auto,Petrol,Germany
+Mercedes benz S class sedan 2012,1.41 cr,sedan,Mercedes,630,4,Auto,Petrol,Germany
+Mercedes benz SL class coupe 2009,99.94 lakhs,convertible,Mercedes,316,2,Auto,Petrol,Germany
+Hyundai elantra sedan 2012,16.53 lakhs,sedan,Hyundai,147.5,5,Manual,Petrol,South Korea
+Hyundai santa fe SUV 2012,25.83 lakhs,SUV,Hyundai,194.3,7,Both,Diesel,South Korea
+Hyundai sonata hybrid sedan 2012,21.28 lakhs,sedan,Hyundai,175,5,Manual,Petrol,South Korea
+Hyundai sonata sedan 2012,19.46 lakhs,sedan,Hyundai,198,5,Both,Petrol,south Korea
+Hyundai tuscon 2012,27.33 lakhs,SUV,Hyundai,182.47,5,Auto,Diesel,south Korea
+Hyundai veracruz SUV 2012,22.05 lakhs,SUV,Hyundai,260,7,Auto,Petrol,south Korea
+Nissan 240SX coupe 1998,19.46 lakhs,sedan,Nissan,155,4,Manual,Petrol,japan
+Nissan juke hatchback 2012,15.75 lakhs,sedan,Nissan,188,5,Manual,Petrol,japan
+Nissan leaf hatchback 2012,27.10 lakhs,sedan,Nissan,107,5,Auto,Petrol,japan
+Rolls-royce ghost sedan 2012,7.95 cr,sedan,Rolls-royce,563,5,Auto,Petrol,U.K
+Rolls-royce phantom sedan 2012,10.48cr,sedan,Rolls-royce,563,5,Auto,Petrol,U.K
+Suzuki aerio sedan 2007,12.51 lakhs,sedan,Suzuki,155,5,Manual,Petrol,japan
+Suzuki kizashi sedan 2012,17.52 lakhs,sedan,Suzuki,175.6,5,Manual,Petrol,japan
+Suzuki sx4 hauchback 2012,9.51 lakhs,sedan,Suzuki,104,5,Manual,Petrol,japan
+Tesla model s sedan 2012,1.50 cr,sedan,Tesla,416,4,Auto,Electric,U.S 
+Toyota 4Runner suv 2012,18.84 lakhs,SUV,Toyota,270,5,Auto,Petrol,japan
+Toyota camry sedan 2012,28.91 lakhs,sedan,Toyota,178,5,Auto,Petrol,japan
+Toyota corolla sedan 2012,20.19 lakhs,sedan,Toyota,87.2,5,Manual,Diesel,japan
+Toyota sequoia SUV 2012,21.55 lakhs,SUV,Toyota,381,7,Manual,Petrol,japan
+volkswagen beetles hatchback 2012,21.47 lakhs,sedan,volkswagen,114.4,4,Auto,Petrol,Germany
+Volkswagen golf hatchback 1991,2.3 lakhs,sedan,volkswagen,100,5,Manual,Petrol,Germany
+Ford fiesta sedan 2012,9.99 lakhs,sedan,Ford ,107.5,5,Manual,Petrol,America
+Ford focus sedan 2012,13.26 lakhs,sedan,Ford ,160,5,Manual,Petrol,America
+Ford freestar minivan 2007,2.52 lakhs,sedan,Ford ,201,7,Auto,Petrol,America
+Jaguar XK XKR  2012,1.88 cr,sedan,Jaguar,502.8,4,Auto,Petrol,U.K
+Ford mustang convertible 2007,70.62 lakhs,sedan,Ford ,395,4,Auto,Petrol,America
+GMC acadia SUV 2012,12.65 lakh,SUV,GMC,288,7,Auto,Petrol,America
+GMC canyon extended cab 2012,17.94 lakhs,SUV,GMC,185,6,Auto,Petrol,America
+GMC savana van 2012,14.54 lakhs,SUV,GMC,324,12,Auto,Petrol,America
+GMC terrain SUV 2012,9.52 lakhs,SUV,GMC,264,5,Auto,Petrol,America
