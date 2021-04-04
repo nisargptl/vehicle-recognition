@@ -1,0 +1,74 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html>
+<head>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+	<meta charset="utf-8"/>
+	<title>Page Title</title>
+	<link rel="stylesheet" href="{% static 'styles.css' %}">
+</head>
+<body>
+	<div class="container">
+		<div  class="wrapper">
+			<div class="left-side">
+				<div class="link-wrapper">
+					<a href="home.html">Home</a>
+				</div>
+
+				<div class="link-wrapper">
+					<a href="compare.html">Compare</a>
+				</div>
+
+				<div class="link-wrapper">
+					<a href="filter.html">Filter</a>
+				</div>
+				<div class="link-wrapper">
+					<a href="about.html">About</a>
+				</div>
+				<div class="link-wrapper">
+					<a href="ContactUs.html">Contact Us</a>
+				</div>
+
+			</div>
+
+			<div class="right-side">
+				<div class="brand-wrapper">
+					<div>DAIICT</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+	<div class="content-wrapper">
+		<div class="items">
+			<div class="item">
+				<div class="img-background" style="background-image: url({% static 'quip.jpg' %});"></div>
+
+				<div class="subtitle">bjxsjxj</div>
+			</div>
+
+
+			<div class="item">
+			<div class="img-background" style="background-image:url('{% static 'c++.jpg' %}')"></div>
+			
+			
+			
+			<div class="subtitle">bjxsjxj</div>
+			</div>
+
+
+
+			<div class="item">
+			<div class="img-background" style="background-image:url('{% static 'python.jpg' %}')"></div>
+			
+			
+			
+			<div class="subtitle">bjxsjxj</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
