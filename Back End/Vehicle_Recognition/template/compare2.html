@@ -1,0 +1,29 @@
+
+{% load static %}
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<title>Compare</title>
+    <link rel="stylesheet" href="{% static 'stylesheet.css' %}">
+</head>
+<body>
+	<h1>Upload image</h1>
+
+	<form method = "POST" enctype = "multipart/form-data" action="predictImage">
+		{% csrf_token %}
+		<input name="filePath" type="file">
+		<input type="submit" value="Submit">
+		<div class="img-background">
+			<img src="{{filePathName}}" alt="">
+		</div>
+		{% if predicted > 0.5 %}
+          Predicted car model: {{car_model}}
+		{% else %}
+		  Car model couldnot be identified. Please re-upload a better image.
+		{% endif %}
+	</form>
+	
+</body>
+</html>
