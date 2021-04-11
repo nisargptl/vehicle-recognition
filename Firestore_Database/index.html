@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+
+    </div>
+            <!-- The core Firebase JS SDK is always required and must be listed first -->
+        <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-app.js"></script>
+
+        <!-- TODO: Add SDKs for Firebase products that you want to use
+            https://firebase.google.com/docs/web/setup#available-libraries -->
+        <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-firestore.js"></script>
+
+        <script>
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        var firebaseConfig = {
+            apiKey: "AIzaSyARvQ3IhXrjDC9kDFOs86UkR44X8rqxi7I",
+            authDomain: "vehiclopedia.firebaseapp.com",
+            projectId: "vehiclopedia",
+            storageBucket: "vehiclopedia.appspot.com",
+            messagingSenderId: "583292418716",
+            appId: "1:583292418716:web:d898c50532a907b5fe8b59",
+            measurementId: "G-BXFB8GMRB3"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        const db=firebase.firestore();
+        //firebase.analytics();
+    </script>
+<script src="app.js"></script>
+</body>
+</html>
