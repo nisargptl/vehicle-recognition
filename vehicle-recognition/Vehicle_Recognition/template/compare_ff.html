@@ -1,0 +1,225 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<title>Compare</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <title>bootstrap4</title>
+	<link rel="stylesheet" href="{% static 'customizations.css' %}">
+</head>
+<body>
+	<div class="container">
+		<div  class="wrapper">
+			<div class="left-side">
+				<div class="link-wrapper">
+					<a href="home.html">Home</a>
+				</div>
+
+				<div class="link-wrapper">
+					<a href="compare.html">Compare</a>
+				</div>
+
+				<div class="link-wrapper">
+					<a href="filter.html">Filter</a>
+				</div>
+				
+				<div class="link-wrapper">
+					<a href="contact.html">Contact Us</a>
+				</div>
+
+			</div>
+
+			<div class="right-side">
+				<div class="brand-wrapper">
+					<div>DAIICT</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="Compare_Item_wrapper">
+		<form method = "POST" enctype = "multipart/form-data" action="cc">
+      {% csrf_token %}
+			<div class="Items">
+				<div class="Compare_Item">
+					<div class="Add_title">
+						SELECT FIRST CAR
+					</div>
+	
+					<div class="selectBox">
+						<div class="customSelect">
+							<label for="cars">Select Model:</label>
+							
+    								<input id="myInput1" type="text" name="myCar1" placeholder="Car" style="width:300px;">
+ 							 
+						</div>
+					</div>
+				</div>
+				<div class="Compare_Item">
+					<div class="Add_title">
+						SELECT FIRST CAR
+					</div>
+	
+					<div class="selectBox">
+						<div class="customSelect">
+							<label for="cars">Select Model:</label>
+							
+    								<input id="myInput2" type="text" name="myCar2" placeholder="Car" style="width:300px;">
+ 							 
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+			<input type="submit" value="Submit" style="margin-top:20px; width:200px; height:20px;">
+    
+      <div class="Items">
+        <div class="Compare_Item"> 
+          <h1>{% for det in car1 %}
+            {{det.price}}
+            {{det.type}}
+            {{det.company}}
+            {{det.engine}}
+            {{det.gear}}
+            {{det.seater}}
+            {{det.fuel}}
+            {{det.country}}
+            {%endfor%}
+            
+
+
+          </h1>
+        </div>
+        <div class="Compare_Item">
+          <h1>
+            {% for det in car2 %}
+            {{det.price}}
+            {{det.type}}
+            {{det.company}}
+            {{det.engine}}
+            {{det.gear}}
+            {{det.seater}}
+            {{det.fuel}}
+            {{det.country}}
+            {%endfor%}
+          </h1>
+        </div>
+      </div>
+		
+    </form>
+   
+	</div>
+  
+
+<script>
+function autocomplete(inp, arr) {
+  /*the autocomplete function takes two arguments,
+  the text field element and an array of possible autocompleted values:*/
+  var currentFocus;
+  /*execute a function when someone writes in the text field:*/
+  inp.addEventListener("input", function(e) {
+      var a, b, i, val = this.value;
+      /*close any already open lists of autocompleted values*/
+      closeAllLists();
+      if (!val) { return false;}
+      currentFocus = -1;
+      /*create a DIV element that will contain the items (values):*/
+      a = document.createElement("DIV");
+      a.setAttribute("id", this.id + "autocomplete-list");
+      a.setAttribute("class", "autocomplete-items");
+      /*append the DIV element as a child of the autocomplete container:*/
+      this.parentNode.appendChild(a);
+      /*for each item in the array...*/
+      for (i = 0; i < arr.length; i++) {
+        /*check if the item starts with the same letters as the text field value:*/
+        if (arr[i].substr(0, val.length).toUpperCase() == val.toUpperCase()) {
+          /*create a DIV element for each matching element:*/
+          b = document.createElement("DIV");
+          /*make the matching letters bold:*/
+          b.innerHTML = "<strong>" + arr[i].substr(0, val.length) + "</strong>";
+          b.innerHTML += arr[i].substr(val.length);
+          /*insert a input field that will hold the current array item's value:*/
+          b.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
+          /*execute a function when someone clicks on the item value (DIV element):*/
+          b.addEventListener("click", function(e) {
+              /*insert the value for the autocomplete text field:*/
+              inp.value = this.getElementsByTagName("input")[0].value;
+              /*close the list of autocompleted values,
+              (or any other open lists of autocompleted values:*/
+              closeAllLists();
+          });
+          a.appendChild(b);
+        }
+      }
+  });
+  /*execute a function presses a key on the keyboard:*/
+  inp.addEventListener("keydown", function(e) {
+      var x = document.getElementById(this.id + "autocomplete-list");
+      if (x) x = x.getElementsByTagName("div");
+      if (e.keyCode == 40) {
+        /*If the arrow DOWN key is pressed,
+        increase the currentFocus variable:*/
+        currentFocus++;
+        /*and and make the current item more visible:*/
+        addActive(x);
+      } else if (e.keyCode == 38) { //up
+        /*If the arrow UP key is pressed,
+        decrease the currentFocus variable:*/
+        currentFocus--;
+        /*and and make the current item more visible:*/
+        addActive(x);
+      } else if (e.keyCode == 13) {
+        /*If the ENTER key is pressed, prevent the form from being submitted,*/
+        e.preventDefault();
+        if (currentFocus > -1) {
+          /*and simulate a click on the "active" item:*/
+          if (x) x[currentFocus].click();
+        }
+      }
+  });
+  function addActive(x) {
+    /*a function to classify an item as "active":*/
+    if (!x) return false;
+    /*start by removing the "active" class on all items:*/
+    removeActive(x);
+    if (currentFocus >= x.length) currentFocus = 0;
+    if (currentFocus < 0) currentFocus = (x.length - 1);
+    /*add class "autocomplete-active":*/
+    x[currentFocus].classList.add("autocomplete-active");
+  }
+  function removeActive(x) {
+    /*a function to remove the "active" class from all autocomplete items:*/
+    for (var i = 0; i < x.length; i++) {
+      x[i].classList.remove("autocomplete-active");
+    }
+  }
+  function closeAllLists(elmnt) {
+    /*close all autocomplete lists in the document,
+    except the one passed as an argument:*/
+    var x = document.getElementsByClassName("autocomplete-items");
+    for (var i = 0; i < x.length; i++) {
+      if (elmnt != x[i] && elmnt != inp) {
+        x[i].parentNode.removeChild(x[i]);
+      }
+    }
+  }
+  /*execute a function when someone clicks in the document:*/
+  document.addEventListener("click", function (e) {
+      closeAllLists(e.target);
+  });
+}
+
+/*An array containing all the country names in the world:*/
+var countries = ["Ford Edge SUV 2012","Hyundai Accent Sedan 2012","Hyundai Elantra Touring Hatchback 2012","Ferrari 458 Italia Convertible 2012","Ferrari FF Coupe 2012","FIAT 500 Convertible 2012","Honda Accord Coupe 2012","Jeep Compass SUV 2012","FIAT 500 Abarth 2012","Lamborghini Aventador Coupe 2012","Mercedes-Benz  C-Class Sedan 2012","Mercedes-Benz  E-Class Sedan 2012","Mercedes-Benz S-Class Sedan 2012","Mercedes-Benz SL-Class Coupe 2009","Hyundai Elantra Sedan 2012","Hyundai Santa Fe SUV 2012","Hyundai Sonata Hybrid Sedan 2012","Hyundai Sonata Sedan 2012","Hyundai Tuscon 2012","Hyundai Veracruz SUV 2012","Nissan 240SX Coupe 1998","Nissan Juke Hatchback 2012","Nissan Leaf Hatchback 2012","Rolls-Royce Ghost Sedan 2012","Rolls-Royce Phantom Sedan 2012","Suzuki Aerio Sedan 2007","Suzuki Kizashi Sedan 2012","Suzuki SX4 Hatchback 2012","Tesla Model S Sedan 2012","Toyota 4Runner SUV 2012","Toyota Camry Sedan 2012","Brunei","Bulgaria","Burkina Faso","Toyota Corolla Sedan 2012","Toyota Sequoia SUV 2012","Volkswagen Beetles Hatchback 2012","Volkswagen Golf Hatchback 1991","Ford Fiesta Sedan 2012","Ford Focus Sedan 2012","Ford Freestar Minivan 2007","Jaguar XK XKR  2012","Ford Mustang Convertible 2007","GMC Acadia SUV 2012","GMC Canyon Extended Cab 2012","GMC Savana Van 2012","GMC Terrain SUV 2012","Acura RL Sedan 2012","Acura TL Sedan 2012","Acura ZDX Hatchback 2012","AM General Hummer SUV 2000","Aston Martin V8 Vantage Convertible 2012","Aston Martin Virage Convertible 2012","Audi A5 Coupe 2012","Audi R8 Coupe 2012","Audi S4 Sedan 2012","Audi S5 Convertible 2012","Audi S6 Sedan 2011","Audi TT RS Coupe 2012","Bentley Arnage Sedan 2009","Bentley Continental GT Coupe 2012","Bentley Mulsanne Sedan 2011","BMW 1 Series Convertible 2012","BMW 3 Series Sedan 2012","BMW ActiveHybrid 5 Sedan 2012","BMW M3 Coupe 2012","BMW M6 Convertible 2010","BMW X3 SUV 2012","BMW X5 SUV 2007","Ford Edge SUV 2012","BMW X6 SUV 2012","BMW Z4 Convertible 2012","Bugatti Veyron 16.4 Convertible 2009","Buick Enclave SUV 2012","Cadillac CTS-V Sedan 2012","Cadillac SRX SUV 2012","Chevrolet Avalanche Crew Cab 2012","Chevrolet Camaro Convertible 2012","Chevrolet Corvette Convertible 2012","Chevrolet Corvette ZR1 2012","Chevrolet Impala Sedan 2007","Chevrolet Malibu Sedan 2007","Chevrolet Monte Carlo Coupe 2007","Chevrolet Silverado 1500 Extended Cab 2012","Chevrolet Sonic Sedan 2012","Chevrolet Tahoe Hybrid SUV 2012","Chevrolet Traverse SUV 2012","Chrysler Aspen SUV 2009","Chrysler PT Cruiser Convertible 2008","Chrysler Sebring Convertible 2010","Dodge Caliber Wagon 2012","Dodge Challenger SRT8 2011","Dodge Charger Sedan 2012","Dodge Durango SUV 2012","Dodge Journey SUV 2012","Dodge Magnum Wagon 2008","Dodge Ram Pickup 3500 Crew Cab 2010","Ferrari 458 Italia Convertible 2012"];
+
+
+
+/*initiate the autocomplete function on the "myInput" element, and pass along the countries array as possible autocomplete values:*/
+autocomplete(document.getElementById("myInput1"), countries);
+autocomplete(document.getElementById("myInput2"), countries);
+</script>
+</body>
+</html>

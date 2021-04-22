@@ -1,0 +1,247 @@
+body{
+	margin:8px;
+}
+.website_name{
+	display:grid;
+	grid-template-columns:1fr;
+	 background-color:#000000;
+	 color:#ffffff;
+	height:300px;
+}
+.container{
+	display:grid;
+	grid-template-columns:1fr;
+	
+       
+}
+.wrapper{
+	display: flex;
+	justify-content: space-between;
+	padding: 38px;
+	 background-color:#000000;
+}
+
+.left-side{
+	text-decoration:none;
+	display: flex;
+	 color:#ffffff;
+}
+
+.right-side{
+	text-decoration:none;
+	display: flex;
+        color:#ffffff;
+}
+
+
+.link-wrapper{
+	margin-right: 20px;
+	font-size:0.9em;
+	text-transform:uppercase;
+	height:22px;
+	border-bottom: 1px solid transparent;
+	transition: border-bottom 0.5s;
+}
+
+.link-wrapper a{
+	color:#ffffff;
+	text-decoration:none;
+	transition: color 0.5s;
+}
+
+.wrapper a:hover{
+	color :#ffff00;
+}
+
+ .message {  
+	 text-align: center;
+    vertical-align: middle;
+	color:#ffffff;
+	
+}
+
+.welcome{
+	align-items: center;
+	text-align: center;
+	font-family: Cinzel;
+    font-size: 46px;  
+	color:#fff;
+	padding:30px;
+	background-size: cover;
+	height:800px;
+	background-position:center;
+	background-repeat:no-repeat;
+	/*background-image : url("https://cdn.thegentlemansjournal.com/wp-content/uploads/2019/08/electric-conversion-cars-mustang-2502x1200-c-top.jpg");*/
+}
+
+.click{
+	font-family: Georgia, 'Times New Roman', Times, serif;
+	color:#fff;
+	padding: 0;
+	text-align: center;
+}
+
+body, html {
+	height: 100%;
+  }
+  
+  .parallax {
+	/* The image used */
+	background-image: url(electric-conversion-cars-mustang-2502x1200-c-top.jpg);
+  
+	/* Full height */
+	height: 45%; 
+  
+	/* Create the parallax scrolling effect */
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+  }
+/*.welcome1 {
+	text-transform: uppercase;
+	font-weight: 900;
+	overflow: hidden;
+	line-height: 0.75;
+	color: #b2b0a9;
+}
+
+.welcome1:hover {
+	color: #b2b0a9;
+}
+
+.welcome1::after {
+	content: '';
+	position: absolute;gi
+	height: 16px;
+	width: 100%;
+	top: 50%;
+	margin-top: -8px;
+	right: 0;
+	background: #F9F9F9;
+	transform: translate3d(-100%,0,0);
+	transition: transform 0.4s;
+	transition-timing-function: cubic-bezier(0.7,0,0.3,1);
+}
+
+.welcome1:hover::after {
+	transform: translate3d(100%,0,0);
+}
+
+.welcome1::before {
+	content: attr(data-letters);
+	position: absolute;
+	z-index: 2;
+	overflow: hidden;
+	color: #424242;
+	white-space: nowrap;
+	width: 0%;
+	transition: width 0.4s 0.3s;
+}
+
+.welcome1:hover::before {
+	width: 100%;
+}*/
+
+.upload-input::-webkit-file-upload-button {
+    visibility: hidden;
+  }
+
+  .upload-input::before {
+    content: 'Select file';
+    display: inline-block;
+    background: linear-gradient(top, #f9f9f9, #e3e3e3);
+    border: 1px solid #999;
+    border-radius: 3px;
+    padding: 5px 8px;
+    outline: none;
+    white-space: nowrap;
+    -webkit-user-select: none;
+    cursor: pointer;
+    text-shadow: 1px 1px #fff;
+    font-weight: 700;
+    font-size: 8pt;
+  }
+  .upload-input:hover::before {
+    border-color: black;
+  }
+  .upload-input-input:active::before {
+    background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
+  }
+
+  .right-side{
+      text-align: right;
+      font-size: 1rem;
+      font-family: 'Times New Roman', Times, serif;
+      font-style: normal;
+       
+  }
+
+.Compare_Item_wrapper {
+	 text-align: center;
+    vertical-align: middle;
+	display: flex;
+font-family: Cinzel;
+    font-size: 20px;
+    height: 1000px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url(bug_holy-trinity-dubai-1000.jpg);
+}
+
+.Compare_Item_wrapper .Items{
+	    width: 100vw;
+	display: flex;
+	margin-top:8px;
+	margin-bottom:12px;
+	background:rgba(176,176,176,0.3);
+}
+
+.Compare_Item_wrapper .Items .Compare_Item{
+	position:relative;
+	float:left;
+	width:50%;
+	height:196px;
+	border:1px solid #ececec;
+}
+.Compare_Item_wrapper .Items .Compare_Item .Add_title{
+padding-top:40px;
+}
+
+.Compare_Item_wrapper .Items .Compare_Item .selectBox{
+margin-top:50px;
+}
+
+.grid-container {
+	display: grid;
+	grid-column-gap: 150px;
+	grid-template-columns: auto auto ;
+	background-color:rgb(29, 28, 28);
+	padding: 50px;
+  }
+  
+  .grid-item {
+	background-color: rgba(255, 255, 255, 0.8);
+	border: 5px solid rgba(0, 0, 0, 0.8);
+	padding: 250px;
+	font-size: 30px;
+	text-align: center;
+  }
+
+
+  .grid-con {
+	display: grid;
+	grid-column-gap: 150px;
+	grid-template-columns: auto auto ;
+	background-color:rgb(29, 28, 28);
+	padding: 50px;
+  }
+  
+  .grid-it {
+	background-color: rgba(255, 255, 255, 0.8);
+	border: 5px solid rgba(0, 0, 0, 0.8);
+	padding: 250px;
+	font-size: 30px;
+	text-align: center;
+  }

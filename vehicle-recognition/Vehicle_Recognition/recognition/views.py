@@ -2,34 +2,66 @@ from django.shortcuts import render
 from django.core.files.storage import FileSystemStorage
 from tensorflow import keras
 import numpy as np
+from recognition.models import CarDetails
+from .models import CarDetails
+from tensorflow.keras.preprocessing.image import load_img
+from tensorflow.keras.preprocessing.image import img_to_array
+from keras.applications.mobilenet import preprocess_input
+import csv
 
-model = keras.models.load_model('/home/nisarg/Desktop/sen project/vehicle-recognition/Vehicle_Recognition/models/New_model.h5')
-list = ['Acura Integra Type R 2001','Acura RL Sedan 2012','Acura TL Sedan 2012','Acura TL Type-S 2008','Acura TSX Sedan 2012',
-'Acura ZDX Hatchback 2012','AM General Hummer SUV 2000','Aston Martin V8 Vantage Convertible 2012','Aston Martin V8 Vantage Coupe 2012',
-'Aston Martin Virage Convertible 2012']
+with open('models/Car_names.csv', newline='') as f:
+    reader = csv.reader(f)
+    data = list(reader)
 
+model = keras.models.load_model('/home/nisarg/Desktop/sen project/vehicle-recognition/Vehicle_Recognition/models/New_model_100_classes_V2.h5')
+
+
+def car_details_info(request):
+    details = CarDetails.objects.all()
+    return render(request,'compare1.html', {'det':details})
+ 
+def home1(request):
+    context = {'a':1}
+    return render(request,'home1.html',context)
 
 def index(request):
     context = {'a':1}
-    return render(request,'home.html',context)
+    return render(request,'home_ff.html',context)
 
-def compare1(request):
+def filter(request):
     context = {'a':1}
-    return render(request,'compare1.html',context)
+    return render(request,'filter_ff.html',context)
+
+def compare(request):
+    return render(request,'compare_ff.html')
 
 
 def predictImage(request):
+
+    
+    
+
     fileObj = request.FILES['filePath']
     fs = FileSystemStorage()
     filePathName = fs.save(fileObj.name,fileObj)
     filePathName = fs.url(filePathName)
     testImage = '.'+filePathName
-    image = keras.preprocessing.image.load_img(testImage, target_size=(227, 227))
-    image = keras.preprocessing.image.img_to_array(image)
-    image = image.reshape((1, image.shape[0], image.shape[1], image.shape[2]))
+    image = load_img(testImage, target_size=(227, 227))
+    image = img_to_array(image)
+    image = image.reshape((1, 227, 227, 3))
+    image = preprocess_input(image)
     predicted_array = model.predict(image)
     print(predicted_array)
     predicted = np.argmax(predicted_array[0])
-    context = {'filePathName':filePathName,'car_model':list[predicted],'predicted':predicted}
-    return render(request,'compare2.html',context)
+    print(predicted)
+    print(predicted_array[0][predicted])
+    car_model = data[predicted][0]
+    print(car_model)
+    details = CarDetails.objects.filter(name = car_model)
+    context = {'filePathName':filePathName,'car_model':data[predicted][0],'predicted':predicted_array[0][predicted],'details'
+    :details}
+    return render(request,'home_ff.html',context)
 
+
+def cc(request):
+    return render(request)
