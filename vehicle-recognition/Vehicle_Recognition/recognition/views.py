@@ -64,4 +64,8 @@ def predictImage(request):
 
 
 def cc(request):
-    return render(request)
+    print(request.POST['myCar1'])
+    car1 = CarDetails.objects.filter(name = request.POST['myCar1'])
+    car2 = CarDetails.objects.filter(name = request.POST['myCar2'])
+    context = {'car1':car1,'car2':car2}
+    return render(request,'compare_ff.html',context)
