@@ -6,14 +6,14 @@ from recognition.models import CarDetails
 from .models import CarDetails
 from tensorflow.keras.preprocessing.image import load_img
 from tensorflow.keras.preprocessing.image import img_to_array
-from keras.applications.mobilenet import preprocess_input
+from tensorflow.keras.applications.vgg16 import preprocess_input
 import csv
 
 with open('models/Car_names.csv', newline='') as f:
     reader = csv.reader(f)
     data = list(reader)
 
-model = keras.models.load_model('/home/nisarg/Desktop/sen project/vehicle-recognition/Vehicle_Recognition/models/New_model_100_classes_V2.h5')
+model = keras.models.load_model('/home/nisarg/Desktop/sen project/vehicle-recognition/Vehicle_Recognition/models/New_model_93_classes.h5')
 
 
 def car_details_info(request):
@@ -62,6 +62,9 @@ def predictImage(request):
     :details}
     return render(request,'home_ff.html',context)
 
-
 def cc(request):
-    return render(request)
+    print(request.POST['myCar1'])
+    car1 = CarDetails.objects.filter(name = request.POST['myCar1'])
+    car2 = CarDetails.objects.filter(name = request.POST['myCar2'])
+    context = {'car1':car1,'car2':car2}
+    return render(request,'compare_ff.html',context)
