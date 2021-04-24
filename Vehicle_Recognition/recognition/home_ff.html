@@ -1,0 +1,151 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<title>Page Title</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <title>bootstrap4</title>
+	<link rel="stylesheet" href="{% static 'customs2.css' %}">
+</head>
+
+<body>
+	<div class="container" styles="position:-webkit-sticky;
+	position:sticky;
+	top:0;">	
+
+		<div  class="wrapper">
+			<div class="left-side">
+				<div class="link-wrapper">
+					<a href="home.html">Home</a>
+				</div>
+
+				<div class="link-wrapper">
+					<a href="compare.html">Compare</a>
+				</div>
+
+				<div class="link-wrapper">
+					<a href="filter.html">Filter</a>
+				</div>
+				
+				<div class="link-wrapper">
+					<a href="contact.html">Contact Us</a>
+				</div> 
+  				
+
+			</div>
+
+			<div class="right-side">
+				<div class="brand-wrapper">
+					<div>DAIICT</div>
+				</div>
+			</div>
+		</div>
+	</div>
+        <!--<div class="message">
+		<div class="welcome">
+			<h1 text-allign="center">Welcome!</h1>
+		
+		
+			<p>Click on the upload button below to indentify the car</p>
+		        <input class="upload-input" type="file" onchange="readURL			(this);" accept="image/*">
+
+	
+		</div>
+
+        </div>-->
+		<div class="parallax"></div>
+
+<div style="height:400px;background-color:rgb(29, 28, 28);font-size:36px">
+	<div class="welcome">
+		<h1 text-allign="center">Welcome!</h1>
+	
+	
+		<p>Click on the upload button below to indentify the car</p>
+        <div class="upload-input">
+			<form method = "POST" enctype = "multipart/form-data" action="predictImage">
+				{% csrf_token %}
+				<input name="filePath" type="file">
+				<input type="submit" value="Submit">
+				
+			
+			</form>
+		</div>
+
+	</div>
+	
+</div>
+<div class="grid-con">
+	<div class="grid-it">{% if filePathName %}
+		<img src="{{filePathName}}" alt="">
+	{% if predicted > 0.5 %}
+	  Predicted car model: {{car_model}}
+	{% else %}
+	  Car model couldnot be identified. Please re-upload a better image.
+	{% endif %}
+{% endif %}</div>
+	<div class="grid-it">
+		{% for det in details %}
+		{{det.price}}
+		{{det.type}}
+		{{det.company}}
+		{{det.engine}}
+		{{det.gear}}
+		{{det.seater}}
+		{{det.fuel}}
+		{{det.country}}
+		{%endfor%}
+
+	</div>
+	
+  </div>
+
+<div class="parallax"></div>
+
+<div style="height:1700px;background-color:rgb(29, 28, 28);font-size:36px">
+	Recommendations
+
+	<div class="grid-container">
+		<div class="grid-item"></div>
+		<div class="grid-item">Recommendation 1 : 
+			{{car1.name}}
+			{{car1.price}}
+			{{car1.type}}
+			{{car1.company}}
+			{{car1.engine}}
+			{{car1.gear}}
+			{{car1.seater}}
+			{{car1.fuel}}
+			{{car1.country}}
+		</div>
+		<div class="grid-item"></div>
+		<div class="grid-item">Recommendation 2:
+			{{car2.name}}
+			{{car2.price}}
+			{{car2.type}}
+			{{car2.company}}
+			{{car2.engine}}
+			{{car2.gear}}
+			{{car2.seater}}
+			{{car2.fuel}}
+			{{car2.country}}
+		</div>
+		<div class="grid-item"></div>
+		<div class="grid-item">Recommendation 3:
+			{{car3.name}}
+			{{car3.price}}
+			{{car3.type}}
+			{{car3.company}}
+			{{car3.engine}}
+			{{car3.gear}}
+			{{car3.seater}}
+			{{car3.fuel}}
+			{{car3.country}}
+		</div>
+		  
+	  </div>
+</div>
+</body>
+</html>
