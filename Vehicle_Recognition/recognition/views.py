@@ -26,7 +26,7 @@ def car_details_info(request):
  
 def home1(request):
     context = {'a':1}
-    return render(request,'home1.html',context)
+    return render(request,'home.html',context)
 
 def index(request):
     context = {'a':1}
@@ -68,13 +68,15 @@ def predictImage(request):
     mycar1 = CarDetails.objects.filter(~Q(name = car_model),price__lte = details[0].price).order_by('-price')
     mycar2 = CarDetails.objects.filter(~Q(name = car_model),price__gte = details[0].price).order_by('price')
     #import ipdb;ipdb.set_trace()
-    print(mycar1[0].price)
-    mycar2 = CarDetails.objects.filter(~Q(name = car_model),price__gte = details[0].price).order_by('price')
-    print(mycar2)
+    
     context = {'filePathName':filePathName,'car_model':data[predicted][0],'predicted':predicted_array[0][predicted],'details'
     :details,'car1':mycar1[0],'car2' : mycar2[0],'car3':mycar2[1]}
     
     return render(request,'home_ff.html',context)
+
+def contact_us(request):
+    context = {'a':1}
+    return render(request,'contact.html',context)
 
 def cc(request):
     print(request)
