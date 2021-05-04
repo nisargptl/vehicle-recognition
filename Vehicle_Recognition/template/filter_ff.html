@@ -1,0 +1,284 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<title>Find Car</title>
+	<link rel="stylesheet" href="customs.css">
+</head>
+<body>
+	<div class="container" styles="position:-webkit-sticky;
+	position:sticky;
+	top:0;">	
+
+		<div  class="wrapper">
+			<div class="left-side" style="padding-top:20px;">
+				<div class="link-wrapper">
+					<a href="home.html">Home</a>
+				</div>
+
+				<div class="link-wrapper">
+					<a href="compare.html">Compare</a>
+				</div>
+
+				<div class="link-wrapper">
+					<a href="filter.html">Filter</a>
+				</div>
+				
+				<div class="link-wrapper">
+					<a href="contact.html">Contact Us</a>
+				</div> 
+  				
+
+			</div>
+			<div  style="padding-right: 214px;">
+				<img src="C:\Users\VERMA\Desktop\website\IRIS.jpg">
+			</div>
+			<div class="right-side" style="padding-top:20px;">
+				<div class="brand-wrapper">
+					<div>DAIICT</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	
+
+	  <div class="row">
+  			<div class="column left" style="background-color:#aaa; position:sticky; position:-webkit-sticky; top:0;">
+   			 	<div class="container-fluid">
+					<form method = "POST" enctype = "multipart/form-data" action="fo">
+						{% csrf_token %}
+            				
+                
+                				<section class="col-12" id="fs_header_bar">
+                    					<div class="row1">
+                      					  <div class="col-2">
+                            					<i class="fa fa-chevron-left"></i>
+                        				  </div>
+                        				  <div class="col-10" id="fs_page_title">
+                           					 Filters
+                       					  </div>
+                    					</div>
+              					</section>
+
+               					<section class="col-12" id="fs_price_body">
+                   					<div>
+                        				 	<span class="heading">
+                            						By Price (in Rupees)
+                        					</span>
+                       						<div class="rangeBox">    
+         								<br>
+         								<input type="radio" id="price1" name="price" value="one">
+  									<label for="price1">0 to 2000000</label><br>
+  									<input type="radio" id="price2" name="price" value="two">
+  									<label for="price2">2000001 to 4000000</label><br>
+  									<input type="radio" id="price3" name="price" value="three">
+  									<label for="price3">4000001 to 1 crore </label><br>
+                                       					<input type="radio" id="price4" name="price" value="four">
+  									<label for="price4">10000001 to 5 crore</label><br>
+									<input type="radio" id="price5" name="price" value="five">
+  									<label for="price5">5 crore & above</label><br>
+  						
+    								</div>
+                      					</div>
+                			       </section>
+	       					<br>
+
+                			       <section class="col-12" id="fs_brand_body">
+                    						<span class="heading">
+                       							 By  Brand
+                   						</span>
+                    						<div class="contents">
+                        
+  									<input type="checkbox" id="brand1" name="brand-1" value="Acura">
+  									<label for="brand1">Acura</label>
+  									<input type="checkbox" id="brand2" name="brand-2" value="Aston Martin">
+ 									<label for="brand2">Aston Martin</label>
+  									<input type="checkbox" id="brand3" name="brand-3" value="Audi">
+  									<label for="brand3">Audi</label>
+  									<input type="checkbox" id="brand4" name="brand-4" value="AM General">
+  									<label for="brand4">AM General</label>
+									<input type="checkbox" id="brand5" name="brand-5" value="Bentley">
+  									<label for="brand5">Bentley</label>
+									<input type="checkbox" id="brand6" name="brand-6" value="BMW">
+  									<label for="brand6">BMW</label>
+  									<input type="checkbox" id="brand7" name="brand-7" value="Bugatti">
+ 									<label for="brand7">Bugatti</label>
+  									<input type="checkbox" id="brand8" name="brand-8" value="Cadillac">
+  									<label for="brand8">Cadillac</label>
+  									<input type="checkbox" id="brand9" name="brand-9" value="Chevrolet">
+  									<label for="brand9">Chevrolet</label>
+									<input type="checkbox" id="brand10" name="brand-10" value="Chrysler">
+  									<label for="brand10">Chrysler</label>
+									<input type="checkbox" id="brand11" name="brand-11" value=" Dodge">
+  									<label for="brand11"> Dodge</label>
+  									<input type="checkbox" id="brand12" name="brand-12" value="Ferrari">
+ 									<label for="brand12">Ferrari</label>
+  									<input type="checkbox" id="brand13" name="brand-13" value="FIAT">
+  									<label for="brand13">FIAT</label>
+  									<input type="checkbox" id="brand14" name="brand-14" value="Ford">
+  									<label for="brand14">Ford</label>
+									<input type="checkbox" id="brand15" name="brand-15" value="GMC">
+  									<label for="brand15">GMC</label>
+									<input type="checkbox" id="brand16" name="brand-16" value="Honda">
+  									<label for="brand16">Honda</label>
+  									<input type="checkbox" id="brand17" name="brand-17" value="Hyundai">
+ 									<label for="brand17">Hyundai</label>
+  									<input type="checkbox" id="brand18" name="brand-18" value="Jaguar">
+  									<label for="brand18">Jaguar</label>
+  									<input type="checkbox" id="brand19" name="brand-19" value="Jeep">
+  									<label for="brand9">Jeep</label>
+									<input type="checkbox" id="brand20" name="brand-20" value="Lamborghini">
+  									<label for="brand20">Lamborghini</label>
+									<input type="checkbox" id="brand21" name="brand-21" value="Mercedes">
+									<label for="brand21">Mercedes</label>
+  									<input type="checkbox" id="brand22" name="brand-22" value="Nissan">
+ 									<label for="brand22">Nissan</label>
+  									<input type="checkbox" id="brand23" name="brand-23" value="Rolls-Royce">
+  									<label for="brand23">Rolls-Royce</label>
+  									<input type="checkbox" id="brand24" name="brand-24" value="Suzuki">
+  									<label for="brand24">Suzuki</label>
+									<input type="checkbox" id="brand25" name="brand-25" value="Tesla">
+  									<label for="brand25">Tesla</label>
+									<input type="checkbox" id="brand26" name="brand-26" value="Toyota">
+  									<label for="brand26">Toyota</label>
+  									<input type="checkbox" id="brand27" name="brand-27" value="Volkswagen">
+ 									<label for="brand27">Volkswagen</label>
+                         
+                     						</div>
+                		</section>
+				<br>
+
+                 
+                		<section class="col-12" id="fs_type_body">
+                    				<span class="heading">
+                        				By  Type
+                   				</span>
+                    				<div class="contents">
+				
+  							<input type="checkbox" id="type1" name="type-1" value="Convertible">
+  							<label for="type1">Convertible</label>
+  							<input type="checkbox" id="type2" name="type-2" value="Hatchback">
+ 							<label for="type2">Hatchback</label>
+  							<input type="checkbox" id="type3" name="type-3" value="Mini Sedan">
+  							<label for="type3">Mini Sedan</label>
+  							<input type="checkbox" id="type4" name="type-4" value="Sedan">
+  							<label for="type4">Sedan</label>
+							<input type="checkbox" id="type5" name="type-5" value="SUV">
+  							<label for="type5">SUV</label>
+                              
+                    				</div>
+                		</section>
+		
+				<br>
+				
+				<section class="col-12" id="fs_no_seats_body">
+                    			<span class="heading">
+                       				 By  Number of Seats
+                    			</span>
+                    			<div class="content">
+				
+  						<input type="radio" id="seat1" name="seats" value="Two">
+  						<label for="seat1">2</label>
+  						<input type="radio" id="seat2" name="seats" value="Four">
+  						<label for="seat2">4</label>
+  						<input type="radio" id="seat3" name="seats" value="Five">
+  						<label for="seat3">5</label>
+                                        	<input type="radio" id="seat5" name="seats" value="Six">
+  						<label for="seat5">6</label>
+  						<input type="radio" id="seat4" name="seats" value="Seven">
+  						<label for="seat4">7</label>
+					
+						<input type="radio" id="seat6" name="seats" value="Eight">
+  						<label for="seat6">8</label>
+						<input type="radio" id="seat7" name="seats" value="Twelve">
+  						<label for="seat7">12</label>
+                              
+                    			</div>
+                		</section>
+				<br>
+				
+				<section class="col-12" id="fs_Type_of_fuel_body">
+                    			<span class="heading">
+                       				 By Type of Fuel
+                    			</span>
+                   			 <div class="content">
+				
+  					<input type="radio" id="fuel1" name="fuel" value="petrol">
+  					<label for="fuel1">Petrol</label>
+  					<input type="radio" id="fuel2" name="fuel" value="diesel">
+  					<label for="fuel2">Diesel</label>
+  					<input type="radio" id="fuel3" name="fuel" value="electric">
+  					<label for="fuel3">Electric</label>
+                                        <input type="radio" id="fuel4" name="fuel" value="gas">
+  					<label for="fuel4">Gas</label>
+					<input type="radio" id="fuel5" name="fuel" value="petrol and diesel">
+  					<label for="fuel5">Petrol and Diesel</label>
+					
+			
+                             
+                    </div>
+                </section>
+		
+		<br>
+		<section class="col-12" id="fs_gear_transmission_body">
+                    <span class="heading">
+                        By Gear Transmission
+                    </span>
+                    <div class="content">
+				
+  					<input type="radio" id="gear1" name="gear" value="manual">
+  					<label for="gear1">Manual</label>
+  					<input type="radio" id="gear2" name="gear" value="automatiic">
+  					<label for="gear2">Automatic</label>
+  					<input type="radio" id="gear3" name="gear" value="manual and automatic">
+  					<label for="gear3">Manual and Automatic</label>
+                                        
+					
+			
+                              
+                    </div>
+                </section>
+		 <div class="submit">
+      			<input type="submit" value="Submit">
+    		</div>
+		
+		</form>
+            </div>
+       
+
+  </div>
+  			<div class="column right" style="background-color:#bbb;">
+  				  <h2>Filtered Cars</h2>
+				{%for car in set%}
+    				  <div class="flex-container">
+  					<div class="left">
+  						<div class="img">
+    							<img src="{{car.path}}" alt="">
+      						</div>  
+   					</div>
+  					<div class="right">
+ 						<ul>
+							
+							
+								<li>Name: {{car.name}}</li>
+								<li>Price: {{car.price}}</li>
+								<li>Type: {{car.type}}</li>
+								<li>Company: {{car.company}}</li>
+								<li>Engine: {{car.engine}}</li>
+								<li>Gear: {{car.gear}}</li>
+								<li>Seater: {{car.seater}}</li>
+								<li>Fuel: {{car.fuel}}</li>
+								<li>Country: {{car.country}}</li>
+						
+						</ul>
+ 					</div>
+
+  
+				</div>
+				</div>
+				{%endfor%}
+</body>
+</html>
