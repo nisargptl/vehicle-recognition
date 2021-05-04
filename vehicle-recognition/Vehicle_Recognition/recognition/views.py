@@ -68,7 +68,17 @@ def predictImage(request):
     details = CarDetails.objects.filter(name = car_model)
     mycar1 = CarDetails.objects.filter(~Q(name = car_model),price__lte = details[0].price).order_by('-price')
     mycar2 = CarDetails.objects.filter(~Q(name = car_model),price__gte = details[0].price).order_by('price')
-    context = {'filePathName':filePathName,'car_model':data[predicted][0],'predicted':predicted_array[0][predicted],'details'
+    if not mycar1:
+        context = {'filePathName':filePathName,'car_model':data[predicted][0],'predicted':predicted_array[0][predicted],'details'
+    :details,'car1':mycar2[0],'car2' : mycar2[1],'car3':mycar2[2]}
+    elif not mycar2:
+        context = {'filePathName':filePathName,'car_model':data[predicted][0],'predicted':predicted_array[0][predicted],'details'
+    :details,'car1':mycar1[0],'car2' : mycar1[1],'car3':mycar1[2]}
+    elif len(mycar2) < 2:
+        context = {'filePathName':filePathName,'car_model':data[predicted][0],'predicted':predicted_array[0][predicted],'details'
+    :details,'car1':mycar1[0],'car2' : mycar1[1],'car3':mycar2[0]}
+    else:
+        context = {'filePathName':filePathName,'car_model':data[predicted][0],'predicted':predicted_array[0][predicted],'details'
     :details,'car1':mycar1[0],'car2' : mycar2[0],'car3':mycar2[1]}
     return render(request,'home_ff.html',context)
 
