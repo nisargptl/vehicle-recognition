@@ -85,7 +85,7 @@
 	{% else %}
 	  Car model couldnot be identified. Please re-upload a better image.
 	{% endif %}
-{% endif %}</div>
+</div>{% if predicted > 0.5 %}
 	<div class="grid-it">
 		{% for det in details %}
 		{{det.price}}
@@ -104,20 +104,50 @@
 	
   </div>
 
-<div class="parallax"></div>
+  <div class="parallax"></div>
 
-<div style="height:1700px;background-color:rgb(29, 28, 28);font-size:36px">
-	Recommendations
-
-	<div class="grid-container">
-		<div class="grid-item">jhkjh</div>
-		<div class="grid-item"></div>
-		<div class="grid-item"></div>
-		<div class="grid-item"></div>
-		<div class="grid-item"></div>
-		<div class="grid-item">dfbskjf</div>
-		  
-	  </div>
-</div>
-</body>
-</html>
+  <div style="height:1700px;background-color:rgb(29, 28, 28);font-size:36px">
+	  Recommendations
+  
+	  <div class="grid-container">
+		  <div class="grid-item"><img src="{{car1.path}}" alt=""></div>
+		  <div class="grid-item">Recommendation 1 : 
+			  {{car1.name}}
+			  {{car1.price}}
+			  {{car1.type}}
+			  {{car1.company}}
+			  {{car1.engine}}
+			  {{car1.gear}}
+			  {{car1.seater}}
+			  {{car1.fuel}}
+			  {{car1.country}}
+		  </div>
+		  <div class="grid-item"><img src="{{car2.path}}" alt=""></div>
+		  <div class="grid-item">Recommendation 2:
+			  {{car2.name}}
+			  {{car2.price}}
+			  {{car2.type}}
+			  {{car2.company}}
+			  {{car2.engine}}
+			  {{car2.gear}}
+			  {{car2.seater}}
+			  {{car2.fuel}}
+			  {{car2.country}}
+		  </div>
+		  <div class="grid-item"><img src="{{car3.path}}" alt=""></div>
+		  <div class="grid-item">Recommendation 3:
+			  {{car3.name}}
+			  {{car3.price}}
+			  {{car3.type}}
+			  {{car3.company}}
+			  {{car3.engine}}
+			  {{car3.gear}}
+			  {{car3.seater}}
+			  {{car3.fuel}}
+			  {{car3.country}}
+		  </div>
+			{%endif%}
+		  {% endif %}</div>
+  </div>
+  </body>
+  </html>

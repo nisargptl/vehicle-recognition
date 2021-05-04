@@ -27,9 +27,10 @@ urlpatterns = [
     url('compare',views.compare,name = 'compare'),
     url('predictImage',views.predictImage,name = 'predictImage'),
     url('det',views.car_details_info),
-    url('home1',views.home1,name = 'home1'),
     url('filter',views.filter,name='filter'),
+    url('contact',views.contact,name = 'contactpage'),
     url('cc',views.cc,name = 'cc'),
+    url('fo',views.fo,name = 'fo'),
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)

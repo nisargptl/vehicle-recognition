@@ -1,0 +1,230 @@
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<title>Page Title</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <title>bootstrap4</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+.header{
+	display:grid;
+	grid-template-columns:1fr;
+       
+}
+.wrapper{
+	display: flex;
+	justify-content: space-between;
+	padding: 38px;
+	 background-color:#000000;
+}
+
+.left-side{
+	text-decoration:none;
+	display: flex;
+}
+
+.right-side{
+	text-decoration:none;
+	display: flex;
+        color:#ffffff;
+}
+
+
+.link-wrapper{
+	margin-right: 20px;
+	font-size:0.9em;
+	text-transform:uppercase;
+	height:22px;
+	border-bottom: 1px solid transparent;
+	transition: border-bottom 0.5s;
+}
+
+.link-wrapper a{
+	color:#ffffff;
+	text-decoration:none;
+	transition: color 0.5s;
+}
+
+
+
+.wrapper a:hover{
+	color :#ffff00;
+}
+
+/* Style inputs */
+input[type=text], select, textarea {
+  width: 100%;
+	
+  padding: 12px;
+  border: 1px solid #ccc;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+input[type=text]textarea {
+  height:80px;
+}
+
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+/* Style the container/contact section */
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 10px;
+  color:#ffffff;
+}
+
+/* Create two columns that float next to eachother */
+.column {
+  float: left;
+  width: 30%;
+  color:#ffffff;
+  margin-top: 6px;
+  padding: 20px;
+}
+.container{
+	background-size: cover;
+	height:800px;
+	background-position:center;
+	background-repeat:no-repeat;
+	background-image : url("/static/contact_im.jpg");
+}
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="header">	
+
+		
+
+		<div  class="wrapper">
+			<div class="left-side" style="padding-top:20px;">
+				<div class="link-wrapper">
+					<a href="home.html">Home</a>
+				</div>
+
+				<div class="link-wrapper">
+					<a href="compare.html">Compare</a>
+				</div>
+
+				<div class="link-wrapper">
+					<a href="filter.html">Filter</a>
+				</div>
+				
+				<div class="link-wrapper">
+					<a href="contact.html">Contact Us</a>
+				</div> 
+  				
+
+			</div>
+			<div  style="padding-right: 214px;">
+				<img src="C:\Users\VERMA\Desktop\website\IRIS.jpg">
+			</div>
+			<div class="right-side" style="padding-top:20px;">
+				<div class="brand-wrapper">
+					<div>DAIICT</div>
+				</div>
+			</div>
+		</div>
+	
+	</div>
+
+<div class="container">
+  <div style="text-align:center; font-family:centil; color:#ffffff; background:rgba(0,0,0,0.5)">
+    
+    <h2>WE WOULD LOVE TO HEAR FROM YOU!<h1>
+  </div>
+  <div class="row">
+   
+    <div class="column">
+      <form  name="form1" onsubmit="required()">
+        <label for="fname">
+	First Name
+	<span style="color:#ff0000">*Required field</span>
+	</label>
+        <input type="text" id="fname" name="firstname" placeholder="Your name..">
+	
+
+        <label for="lname">
+	Last Name
+	<span style="color:#ff0000">*Required field</span>
+	</label>
+        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+        <label for="country">
+	Country
+	<span style="color:#ff0000">*Required field</span>
+	</label>
+        <select id="country" name="country">
+	  <option value="india">India</option>
+          <option value="australia">Australia</option>
+          <option value="canada">Canada</option>
+          <option value="usa">USA</option>
+        </select>
+
+        <label for="subject">
+	Subject
+	<span style="color:#ff0000">*Required field</span>
+	</label>
+        <textarea id="subject" name="subject" placeholder="Write something.." style="height:70px"></textarea>
+
+        <input type="submit" value="Submit">
+      </form>
+    </div>
+  </div>
+</div>
+<script>
+	function required()
+	{
+		var empt1 = document.forms["form1"]["firstname"].value;
+		var empt2 = document.forms["form1"]["lastname"].value;
+		var empt3 = document.forms["form1"]["country"].value;
+		var empt4 = document.forms["form1"]["subject"].value;
+		if (empt1 == "" || empt2 == "" || empt3==""  || empt4=="")
+		{
+		alert("Please fill complete details");
+		return false;
+		}
+		else 
+		{
+		alert("Your feedback has been recorded");
+		return true; 
+		}
+}
+
+</script>
+</body>
+</html>

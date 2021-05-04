@@ -18,7 +18,8 @@ class CarDetails(models.Model):
     gear = models.CharField(db_column='Gear', max_length=100, blank=True, null=True)  # Field name made lowercase.
     fuel = models.CharField(db_column='Fuel', max_length=100, blank=True, null=True)  # Field name made lowercase.
     country = models.CharField(db_column='Country', max_length=100, blank=True, null=True)  # Field name made lowercase.
+    path = models.CharField(db_column='Path', max_length=100, blank=True, null=True)
 
     class Meta:
         managed = False
-        db_table = 'car_details'
+        db_table = 'car3'
