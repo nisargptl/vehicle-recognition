@@ -5,15 +5,15 @@
 <head>
 	<meta charset="utf-8"/>
 	<title>Find Car</title>
-	<link rel="stylesheet" href="customs.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <title>bootstrap4</title>
+	<link rel="stylesheet" href="{% static 'customs3.css' %}">
 </head>
 <body>
-	<div class="container" styles="position:-webkit-sticky;
-	position:sticky;
-	top:0;">	
-
+	<div class="container" >
 		<div  class="wrapper">
-			<div class="left-side" style="padding-top:20px;">
+			<div class="left-side">
 				<div class="link-wrapper">
 					<a href="home.html">Home</a>
 				</div>
@@ -28,14 +28,13 @@
 				
 				<div class="link-wrapper">
 					<a href="contact.html">Contact Us</a>
-				</div> 
-  				
+				</div>
 
 			</div>
-			<div  style="padding-right: 214px;">
-				<img src="C:\Users\VERMA\Desktop\website\IRIS.jpg">
-			</div>
-			<div class="right-side" style="padding-top:20px;">
+			<div style = "padding-right: 240px;">
+				<img src="static/cr_iris1.png">
+			  </div>
+			<div class="right-side">
 				<div class="brand-wrapper">
 					<div>DAIICT</div>
 				</div>
@@ -45,12 +44,12 @@
 
 	
 
-	  <div class="row">
-  			<div class="column left" style="background-color:#aaa; position:sticky; position:-webkit-sticky; top:0;">
+	<div class="row">
+	  
+  			<div class="column left" style="background-color:#aaa;position:sticky; position:-webkit-sticky; top:0;">
    			 	<div class="container-fluid">
 					<form method = "POST" enctype = "multipart/form-data" action="fo">
 						{% csrf_token %}
-            				
                 
                 				<section class="col-12" id="fs_header_bar">
                     					<div class="row1">
@@ -92,59 +91,61 @@
                    						</span>
                     						<div class="contents">
                         
-  									<input type="checkbox" id="brand1" name="brand-1" value="Acura">
+  									<input type="checkbox" id="brand1" name="company" value="Acura">
   									<label for="brand1">Acura</label>
-  									<input type="checkbox" id="brand2" name="brand-2" value="Aston Martin">
+  									<input type="checkbox" id="brand2" name="company" value="Aston Martin">
  									<label for="brand2">Aston Martin</label>
-  									<input type="checkbox" id="brand3" name="brand-3" value="Audi">
+  									<input type="checkbox" id="brand3" name="company" value="Audi">
   									<label for="brand3">Audi</label>
-  									<input type="checkbox" id="brand4" name="brand-4" value="AM General">
+  									<input type="checkbox" id="brand4" name="company" value="AM General">
   									<label for="brand4">AM General</label>
-									<input type="checkbox" id="brand5" name="brand-5" value="Bentley">
+									<input type="checkbox" id="brand5" name="company" value="Bentley">
   									<label for="brand5">Bentley</label>
-									<input type="checkbox" id="brand6" name="brand-6" value="BMW">
+									<input type="checkbox" id="brand6" name="company" value="BMW">
   									<label for="brand6">BMW</label>
-  									<input type="checkbox" id="brand7" name="brand-7" value="Bugatti">
+  									<input type="checkbox" id="brand28" name="company" value="Buick (General Motors)">
+ 									<label for="brand28">Buick</label>									
+  									<input type="checkbox" id="brand7" name="company" value="Bugatti">
  									<label for="brand7">Bugatti</label>
-  									<input type="checkbox" id="brand8" name="brand-8" value="Cadillac">
+  									<input type="checkbox" id="brand8" name="company" value="Cadillac (General Motors)">
   									<label for="brand8">Cadillac</label>
-  									<input type="checkbox" id="brand9" name="brand-9" value="Chevrolet">
+  									<input type="checkbox" id="brand9" name="company" value="Chevrolet (General Motors)">
   									<label for="brand9">Chevrolet</label>
-									<input type="checkbox" id="brand10" name="brand-10" value="Chrysler">
+									<input type="checkbox" id="brand10" name="company" value="Chrysler">
   									<label for="brand10">Chrysler</label>
-									<input type="checkbox" id="brand11" name="brand-11" value=" Dodge">
+									<input type="checkbox" id="brand11" name="company" value="Dodge">
   									<label for="brand11"> Dodge</label>
-  									<input type="checkbox" id="brand12" name="brand-12" value="Ferrari">
+  									<input type="checkbox" id="brand12" name="company" value="Ferrari">
  									<label for="brand12">Ferrari</label>
-  									<input type="checkbox" id="brand13" name="brand-13" value="FIAT">
+  									<input type="checkbox" id="brand13" name="company" value="FIAT">
   									<label for="brand13">FIAT</label>
-  									<input type="checkbox" id="brand14" name="brand-14" value="Ford">
+  									<input type="checkbox" id="brand14" name="company" value="Ford">
   									<label for="brand14">Ford</label>
-									<input type="checkbox" id="brand15" name="brand-15" value="GMC">
+									<input type="checkbox" id="brand15" name="company" value="GMC">
   									<label for="brand15">GMC</label>
-									<input type="checkbox" id="brand16" name="brand-16" value="Honda">
+									<input type="checkbox" id="brand16" name="company" value="Honda">
   									<label for="brand16">Honda</label>
-  									<input type="checkbox" id="brand17" name="brand-17" value="Hyundai">
+  									<input type="checkbox" id="brand17" name="company" value="Hyundai">
  									<label for="brand17">Hyundai</label>
-  									<input type="checkbox" id="brand18" name="brand-18" value="Jaguar">
+  									<input type="checkbox" id="brand18" name="company" value="Jaguar">
   									<label for="brand18">Jaguar</label>
-  									<input type="checkbox" id="brand19" name="brand-19" value="Jeep">
-  									<label for="brand9">Jeep</label>
-									<input type="checkbox" id="brand20" name="brand-20" value="Lamborghini">
+  									<input type="checkbox" id="brand19" name="company" value="Jeep">
+  									<label for="brand19">Jeep</label>
+									<input type="checkbox" id="brand20" name="company" value="Lamborghini">
   									<label for="brand20">Lamborghini</label>
-									<input type="checkbox" id="brand21" name="brand-21" value="Mercedes">
+									<input type="checkbox" id="brand21" name="company" value="Mercedes">
 									<label for="brand21">Mercedes</label>
-  									<input type="checkbox" id="brand22" name="brand-22" value="Nissan">
+  									<input type="checkbox" id="brand22" name="company" value="Nissan">
  									<label for="brand22">Nissan</label>
-  									<input type="checkbox" id="brand23" name="brand-23" value="Rolls-Royce">
+  									<input type="checkbox" id="brand23" name="company" value="Rolls-royce">
   									<label for="brand23">Rolls-Royce</label>
-  									<input type="checkbox" id="brand24" name="brand-24" value="Suzuki">
+  									<input type="checkbox" id="brand24" name="company" value="Suzuki">
   									<label for="brand24">Suzuki</label>
-									<input type="checkbox" id="brand25" name="brand-25" value="Tesla">
+									<input type="checkbox" id="brand25" name="company" value="Tesla">
   									<label for="brand25">Tesla</label>
-									<input type="checkbox" id="brand26" name="brand-26" value="Toyota">
+									<input type="checkbox" id="brand26" name="company" value="Toyota">
   									<label for="brand26">Toyota</label>
-  									<input type="checkbox" id="brand27" name="brand-27" value="Volkswagen">
+  									<input type="checkbox" id="brand27" name="company" value="volkswagen">
  									<label for="brand27">Volkswagen</label>
                          
                      						</div>
@@ -158,15 +159,15 @@
                    				</span>
                     				<div class="contents">
 				
-  							<input type="checkbox" id="type1" name="type-1" value="Convertible">
+  							<input type="checkbox" id="type1" name="type" value="convertible">
   							<label for="type1">Convertible</label>
-  							<input type="checkbox" id="type2" name="type-2" value="Hatchback">
+  							<input type="checkbox" id="type2" name="type" value="Hatchback">
  							<label for="type2">Hatchback</label>
-  							<input type="checkbox" id="type3" name="type-3" value="Mini Sedan">
+  							<input type="checkbox" id="type3" name="type" value="mini sedan">
   							<label for="type3">Mini Sedan</label>
-  							<input type="checkbox" id="type4" name="type-4" value="Sedan">
+  							<input type="checkbox" id="type4" name="type" value="Sedan">
   							<label for="type4">Sedan</label>
-							<input type="checkbox" id="type5" name="type-5" value="SUV">
+							<input type="checkbox" id="type5" name="type" value="SUV">
   							<label for="type5">SUV</label>
                               
                     				</div>
@@ -180,20 +181,20 @@
                     			</span>
                     			<div class="content">
 				
-  						<input type="radio" id="seat1" name="seats" value="Two">
+  						<input type="radio" id="seat1" name="seater" value="2">
   						<label for="seat1">2</label>
-  						<input type="radio" id="seat2" name="seats" value="Four">
+  						<input type="radio" id="seat2" name="seater" value="4">
   						<label for="seat2">4</label>
-  						<input type="radio" id="seat3" name="seats" value="Five">
+  						<input type="radio" id="seat3" name="seater" value="5">
   						<label for="seat3">5</label>
-                                        	<input type="radio" id="seat5" name="seats" value="Six">
+                                        	<input type="radio" id="seater" name="seats" value="6">
   						<label for="seat5">6</label>
-  						<input type="radio" id="seat4" name="seats" value="Seven">
+  						<input type="radio" id="seat4" name="seater" value="7">
   						<label for="seat4">7</label>
 					
-						<input type="radio" id="seat6" name="seats" value="Eight">
+						<input type="radio" id="seat6" name="seater" value="8">
   						<label for="seat6">8</label>
-						<input type="radio" id="seat7" name="seats" value="Twelve">
+						<input type="radio" id="seat7" name="seater" value="12">
   						<label for="seat7">12</label>
                               
                     			</div>
@@ -206,15 +207,15 @@
                     			</span>
                    			 <div class="content">
 				
-  					<input type="radio" id="fuel1" name="fuel" value="petrol">
+  					<input type="radio" id="fuel1" name="fuel" value="Petrol">
   					<label for="fuel1">Petrol</label>
-  					<input type="radio" id="fuel2" name="fuel" value="diesel">
+  					<input type="radio" id="fuel2" name="fuel" value="Diesel">
   					<label for="fuel2">Diesel</label>
-  					<input type="radio" id="fuel3" name="fuel" value="electric">
+  					<input type="radio" id="fuel3" name="fuel" value="Electric">
   					<label for="fuel3">Electric</label>
-                                        <input type="radio" id="fuel4" name="fuel" value="gas">
+                                        <input type="radio" id="fuel4" name="fuel" value="Gas">
   					<label for="fuel4">Gas</label>
-					<input type="radio" id="fuel5" name="fuel" value="petrol and diesel">
+					<input type="radio" id="fuel5" name="fuel" value="Both">
   					<label for="fuel5">Petrol and Diesel</label>
 					
 			
@@ -229,11 +230,11 @@
                     </span>
                     <div class="content">
 				
-  					<input type="radio" id="gear1" name="gear" value="manual">
+  					<input type="radio" id="gear1" name="gear" value="Manual">
   					<label for="gear1">Manual</label>
-  					<input type="radio" id="gear2" name="gear" value="automatiic">
+  					<input type="radio" id="gear2" name="gear" value="Automatiic">
   					<label for="gear2">Automatic</label>
-  					<input type="radio" id="gear3" name="gear" value="manual and automatic">
+  					<input type="radio" id="gear3" name="gear" value="Both">
   					<label for="gear3">Manual and Automatic</label>
                                         
 					
@@ -250,13 +251,17 @@
        
 
   </div>
+  <h2>Filtered Cars</h2>
+      		
   			<div class="column right" style="background-color:#bbb;">
-  				  <h2>Filtered Cars</h2>
 				{%for car in set%}
     				  <div class="flex-container">
+
   					<div class="left">
+						
   						<div class="img">
-    							<img src="{{car.path}}" alt="">
+							
+							<img src="{{car.path}}" alt="">
       						</div>  
    					</div>
   					<div class="right">
@@ -278,7 +283,11 @@
 
   
 				</div>
-				</div>
 				{%endfor%}
+				</div>
+			</div>
+				
+
+
 </body>
 </html>
