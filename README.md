@@ -7,3 +7,6 @@ the 2 closest competitors so a user can do some quick comparison shopping.</h4>
 
 <h5>The link for the demo of the software is available here :</h5>
 https://youtu.be/Yb6ZuATJIEI
+
+<h5>And the link of our website is here: </h5>
+https://viris.herokuapp.com/
