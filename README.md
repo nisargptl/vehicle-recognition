@@ -1,4 +1,4 @@
-<h1>IRIS vehicle recognition software</h1>
+<h1>IRIS Vehicle Recognition Software</h1>
 
 <h4>This enables users to gather information about any vehicle and they can see the details in a matter of seconds.
 Snap a quick photo in the app and it will provide the details about the vehicle make, model,
